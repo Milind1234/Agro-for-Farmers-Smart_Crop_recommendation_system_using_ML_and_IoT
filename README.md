@@ -1,69 +1,149 @@
 # 🌾 Crop Recommendation System using ML and IoT
 
 ## 📌 Project Overview
-This project integrates **Machine Learning (ML)** and **IoT sensors** to recommend the best crops for farmers based on real-time soil and weather data.  
-It consists of hardware (sensors + NodeMCU ESP8266/ESP32), software (ML models + PHP web app), and a database (MySQL - XAMPP).
 
----
+The **Crop Recommendation System using ML and IoT** is designed to help
+farmers make data-driven decisions about which crops to cultivate.\
+By integrating **Machine Learning** with **IoT-based sensors**, this
+system leverages both **historical datasets** and **real-time
+environmental data**\
+to provide accurate crop recommendations, fertilizer suggestions, and
+weather insights.
 
-## 🏗️ System Architecture
+------------------------------------------------------------------------
+
+## 🎯 Objectives
+
+-   Assist farmers in selecting the most suitable crops based on **soil
+    nutrients and weather conditions**.
+-   Collect **real-time sensor data** (pH, NPK, temperature, humidity)
+    through **IoT hardware**.
+-   Enhance agricultural productivity and reduce resource wastage.
+-   Provide a **web-based interface** for easy farmer interaction.
+
+------------------------------------------------------------------------
+
+## ⚙️ System Architecture
 
 ![System Architecture](assets/img/system_arch.png)
 
----
+------------------------------------------------------------------------
 
-## ⚙️ Hardware Components
-- 🌡️ **DHT11 Sensor** → Temperature & Humidity
-- 🧪 **pH Sensor (PE03)** → Soil pH Measurement
-- 🌱 **NPK Sensor** → Soil Nutrients (Nitrogen, Phosphorus, Potassium)
-- 🔌 **NodeMCU ESP8266 / ESP32** → IoT microcontroller for sensor data collection
-- 🔋 **Breadboard & Wires** → Circuit connections
+## 🖥️ Tech Stack
 
----
+### 🔹 Machine Learning
 
-## 💻 Software & Tools
-- **Programming Languages**: Python, PHP
-- **Database**: MySQL (XAMPP)
-- **Frameworks & Libraries**: scikit-learn, pandas, numpy, matplotlib
-- **IoT Platform**: NodeMCU (Arduino IDE for coding)
-- **Web App**: PHP, Bootstrap, HTML, CSS
-- **API**: OpenWeather API for weather forecasting
+-   Python (scikit-learn, pandas, numpy)
+-   Dataset from **Kaggle** for training
 
----
+### 🔹 IoT Hardware
 
-## 📊 Machine Learning Model
-- **Dataset**: Kaggle crop dataset (soil nutrients, pH, temperature, humidity, rainfall)
-- **Algorithm Used**: Random Forest Classifier (best accuracy among tested models)
-- **Inputs**: Real-time sensor values + weather API data
-- **Output**: Recommended crop & fertilizer suggestion
+-   NodeMCU ESP8266 / ESP32
+-   Sensors: **pH Sensor, NPK Sensor, DHT11 (Temperature & Humidity)**
 
----
+### 🔹 Backend
 
-## 🌐 Web Application Features
-- 👨‍🌾 **Farmer Login & Profile**
-- 🌱 **Crop Recommendation** (based on real-time IoT + ML model)
-- 💊 **Fertilizer Recommendation**
-- 🌦️ **Weather Forecasting** (via OpenWeather API)
-- 📈 **Rainfall Prediction** in mm
-- 📊 **Sensor Data Dashboard** (real-time values from IoT sensors)
+-   PHP
+-   Python integration with PHP for ML predictions
 
----
+### 🔹 Database
 
-## 🗄️ Database Design (MySQL)
-- **farmers** → Farmer profiles & login info
-- **sensor_data** → Stores IoT sensor readings (pH, NPK, temp, humidity)
-- **predictions** → Crop recommendation results
-- **weather_data** → Weather API + rainfall prediction
+-   MySQL (XAMPP)
 
----
+### 🔹 Frontend
+
+-   HTML, CSS, Bootstrap
+
+------------------------------------------------------------------------
+
+## 📊 Features
+
+-   🌱 **Crop Recommendation**: Suggests best crops based on soil &
+    climate.
+-   💊 **Fertilizer Recommendation**: Provides fertilizer suggestions.
+-   ☁️ **Weather Forecasting**: Real-time weather updates using
+    OpenWeather API.
+-   📡 **Sensor Integration**: Live data collection and display.
+-   🔐 **Admin & Farmer Portal**: Secure login and personalized
+    dashboard.
+
+------------------------------------------------------------------------
+
+## 🛠️ Software Setup
+
+### 🔹 Requirements
+
+-   Python 3.12.6
+
+-   XAMPP (MySQL & Apache Server)
+
+-   PHP 8+
+
+-   Libraries:
+
+    ``` bash
+    pip install pandas numpy scikit-learn flask requests
+    ```
+
+### 🔹 Running the Project
+
+1.  Clone the repository:
+
+    ``` bash
+    git clone https://github.com/your-repo/crop-recommendation.git
+    ```
+
+2.  Import MySQL database from `/database/crop_db.sql`.
+
+3.  Start **XAMPP** (Apache & MySQL).
+
+4.  Run ML model server:
+
+    ``` bash
+    python crop_model.py
+    ```
+
+5.  Open `http://localhost/crop_system` in browser.
+
+------------------------------------------------------------------------
+
+## 📷 Screenshots
+
+### 🔹 System Dashboard
+
+![Dashboard](screenshots/dashboard.png)
+
+### 🔹 Crop Recommendation Output
+
+![Crop Recommendation](screenshots/crop_recommend.png)
+
+### 🔹 Weather Forecast Page
+
+![Weather Forecast](screenshots/weather.png)
+
+### 🔹 Sensor Values Display
+
+![Sensor Data](screenshots/sensor.png)
+
+------------------------------------------------------------------------
 
 ## 🚀 Future Enhancements
-- 📡 Mobile App integration for farmers
-- 🌍 Multilingual farmer dashboard (regional languages)
-- 🤖 Advanced Deep Learning models for better accuracy
-- 📶 Offline data caching & SMS-based recommendations
 
----
+-   🌍 Mobile App for farmers (Android/iOS).
+-   🤖 Advanced ML models (Deep Learning).
+-   📊 Data visualization dashboards.
+-   ☁️ Cloud integration for large-scale deployment.
+
+------------------------------------------------------------------------
+
+## 👨‍💻 Contributors
+
+-   **Milind Chavan** -- Project Lead\
+-   Team Members -- ML Model, IoT, Frontend & Backend
+
+------------------------------------------------------------------------
 
 ## 📜 License
-This project is licensed under the MIT License - feel free to use and modify.
+
+This project is licensed under the MIT License -- feel free to use and
+modify.
