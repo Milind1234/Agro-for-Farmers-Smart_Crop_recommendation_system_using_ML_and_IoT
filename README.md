@@ -7,7 +7,7 @@ farmers make data-driven decisions about which crops to cultivate.\
 By integrating **Machine Learning** with **IoT-based sensors**, this
 system leverages both **historical datasets** and **real-time
 environmental data**\
-to provide accurate crop recommendations, fertilizer suggestions, and
+to provide accurate crop recommendations, rainfall prediction , and
 weather insights.
 
 ------------------------------------------------------------------------
