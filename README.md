@@ -60,7 +60,6 @@ weather insights.
 
 -   🌱 **Crop Recommendation**: Suggests best crops based on soil &
     climate.
--   💊 **Fertilizer Recommendation**: Provides fertilizer suggestions.
 -   ☁️ **Weather Forecasting**: Real-time weather updates using
     OpenWeather API.
 -   📡 **Sensor Integration**: Live data collection and display.
